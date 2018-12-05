@@ -1,0 +1,33 @@
+<div style="padding: 5px" class="card">
+  <form (submit)="onAddBlog(blogForm)" #blogForm="ngForm"  >
+<input
+
+  type="text"
+  name="title"
+  placeholder="Movie Name"
+  required
+  ngModel
+  #title="ngModel"
+
+
+/>
+<p *ngIf="title.invalid" class="text-danger">Please enter a Movie Name</p>
+<hr/>
+<textarea
+
+rows= 5
+  type="text"
+  name="content"
+  placeholder="Movie Review"
+  required
+  ngModel
+  #content="ngModel"
+></textarea>
+<p *ngIf="content.invalid" class="text-danger">Please enter a Movie Review</p>
+
+<br/>
+<button class="btn btn-primary" type="submit">Add Review</button>
+</form>
+</div>
+
+<app-blog-list><app-blog-list>

@@ -1,0 +1,17 @@
+<div class="jumbotron">
+  <h1>All About Movies!!</h1>
+
+  <p>
+     MovieFlix to watch the latest movies, exclusive TV shows as well as award-winning Series.
+  </p>
+</div>
+
+
+    <ul *ngIf="posts.length >0">
+    <div *ngFor="let post of posts">
+      <li [ngStyle]="{'font-size.px':'30'}">{{post.title|uppercase}}</li>
+      <p>{{post.content|lowercase}}</p>
+    </div>
+    </ul>
+    <p class="text-danger" *ngIf="posts.length <=0"> Sorry!! No Posts yet</p>
+
